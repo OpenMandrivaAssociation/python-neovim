@@ -5,7 +5,7 @@ connecting to and scripting Nvim processes through its msgpack-rpc API.
 
 Name:           python-neovim
 Version:	0.3.2
-Release:        2
+Release:        3
 
 License:        ASL 2.0
 Summary:        Python client to Neovim
