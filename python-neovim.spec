@@ -4,8 +4,8 @@ connecting to and scripting Nvim processes through its msgpack-rpc API.
 %bcond_with sphinx
 
 Name:           python-neovim
-Version:	0.3.2
-Release:        3
+Version:	0.4.0
+Release:	1
 
 License:        ASL 2.0
 Summary:        Python client to Neovim
