@@ -13,22 +13,13 @@ URL:            https://github.com/neovim/python-client
 Source0:        https://github.com/neovim/python-client/archive/%{version}/python-client-%{version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  python2-devel
 BuildRequires:  python-devel
-BuildRequires:  python2-setuptools
 BuildRequires:  python-setuptools
 %if %{with sphinx}
 BuildRequires:  python-sphinx
 %endif
 
 %description
-%{desc}
-
-%package -n python2-neovim
-Summary:        %{summary}
-Requires:       neovim
-
-%description -n python2-neovim
 %{desc}
 
 %if %{with sphinx}
@@ -45,7 +36,6 @@ This package contains documentation in HTML format.
 %autosetup -n pynvim-%{version}
 
 %build
-%py2_build
 %py3_build
 
 %if %{with sphinx}
@@ -56,19 +46,12 @@ popd
 %endif
 
 %install
-%py2_install
 %py3_install
 
 %files
 %license LICENSE
 %doc README.md
 %{python3_sitelib}/*
-
-%files -n python2-neovim
-%license LICENSE
-%doc README.md
-%{python2_sitelib}/*
-
 
 %if %{with sphinx}
 %files doc
